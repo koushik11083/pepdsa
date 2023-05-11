@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		int n=x;
+		int c=0;
+		while(n>0)
+		{
+		    n/=10;
+		    c++;
+		}
+		for(int j=c-1;j>=0;j--)
+		{
+		    int t=(int)Math.pow(10,j);
+		    int a=x/t;
+		    System.out.println(a);
+		    x-=a*t;
+		}
+		
+	}
+}
